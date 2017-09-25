@@ -1,9 +1,9 @@
 # MannvilleGroup_Strat_Hackathon
-Team: Big Data > Big Lore
-Team members: <a href="https://github.com/JustinGOSSES">JustinGOSSES</a>,<a href="https://github.com/jazzskier">jazzskier</a>, <a href="https://github.com/GeophysicsPanda">GeophysicsPanda</a>, and <a href="https://github.com/dalide">dalide</a>.
-When: September 24th, 2017
-Where: Station Houston
-What: Agile Hackathon -> <a href="https://agilescientific.com/events/subsurface2018">event & sponsors</a>
+- Team: Big Data > Big Lore
+- Team members: <a href="https://github.com/JustinGOSSES">JustinGOSSES</a>,<a href="https://github.com/jazzskier">jazzskier</a>, <a href="https://github.com/GeophysicsPanda">GeophysicsPanda</a>, and <a href="https://github.com/dalide">dalide</a>.
+- When: September 24th, 2017
+- Where: Station Houston
+- What: Agile Hackathon -> <a href="https://agilescientific.com/events/subsurface2018">event & sponsors</a>
 
 ## Project Statement
 Predict stratigraphic surfaces based on training on human-picked stratigraphic surfaces. Used 2000+ wells with Picks from the Mannville, including McMurray, in Alberta, Canada.
