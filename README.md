@@ -31,6 +31,8 @@ https://github.com/JustinGOSSES/MannvilleGroup_Strat_Hackathon/blob/master/data_
 Version of feature engineering work done during hackathon (but didn't get to include during hackathon)
 https://github.com/JustinGOSSES/MannvilleGroup_Strat_Hackathon/blob/master/Feature_Brainstorm_Justin_vD-Copy1.ipynb
 
+## Key Jupyter Notebooks Post Hackathon
+
 Latest feature engineering work (runs faster and less complication code)
 https://github.com/JustinGOSSES/MannvilleGroup_Strat_Hackathon/blob/master/Feature_Brainstorm_Justin_vE_PH.ipynb
 
