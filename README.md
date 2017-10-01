@@ -4,7 +4,7 @@
 - When: September 24th, 2017
 - Where: <a href="http://stationhouston.com/">Station Houston</a>
 - What: Agile Hackathon -> <a href="https://agilescientific.com/events/subsurface2018">event & sponsors</a>
-- Thanks: to <a href="https://www.meetup.com/AWS-Houston/">AWS cloud services Houston</a> and <a href="https://sigopt.com/">Sigopt</a>
+- Thanks: to <a href="https://www.meetup.com/AWS-Houston/">AWS cloud services Houston</a> and <a href="https://sigopt.com/">Sigopt</a> for help and the other sponsors for feeding us so we didn't have to leave our keyboard
 
 ## Project Statement
 Predict stratigraphic surfaces based on training on human-picked stratigraphic surfaces. Used 2000+ wells with Picks from the Mannville, including McMurray, in Alberta, Canada.
