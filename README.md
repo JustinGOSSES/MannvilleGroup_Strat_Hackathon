@@ -26,8 +26,11 @@ Data is also in the repo folder: <a href="https://github.com/JustinGOSSES/Mannvi
 Final Data Prep & Machine Learning for the prediction finished by end of hackathon
 https://github.com/JustinGOSSES/MannvilleGroup_Strat_Hackathon/blob/master/data_prep_wells_xgb.ipynb
 
-Latest version of features engineering work (but didn't get to include during hackathon)
+Version of feature engineering work done during hackathon (but didn't get to include during hackathon)
 https://github.com/JustinGOSSES/MannvilleGroup_Strat_Hackathon/blob/master/Feature_Brainstorm_Justin_vD-Copy1.ipynb
+
+latest feature engineering work (runs faster and less complication code)
+https://github.com/JustinGOSSES/MannvilleGroup_Strat_Hackathon/blob/master/Feature_Brainstorm_Justin_vE_PH.ipynb
 
 ## Future Work
 1. Optimize code generative feature engineering code moving as much as possible to more efficient vector numpy
