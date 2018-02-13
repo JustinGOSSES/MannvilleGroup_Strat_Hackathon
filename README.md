@@ -46,14 +46,14 @@ Key approaches were:
 1. Leverage knowledge from nearby wells.
 2. Instead of distinguishing between 2 classes, pick and not pick, distinguish between 3 class, pick, not pick but within 5 meters and not within 5 of pick.
 
-## Future Work (missing numbers are work already done)
+## Future Work
 1. Optimize code generative feature engineering code moving as much as possible to more efficient vector numpy
 2. Shrink feature generation to more reasonable number
 3. Explore different ways to pick included features that are more efficient
 4. Continue deployment on GPU cloud instances with more computing power
-7. Build upon early investigation for geographic similar well cross-correlation as 1st step before other feature engineering & modeling.
-8. Explore other time series matching as pre-modeling step for additional feature generation or weighting. 
-9. Visualize probabilty of pick along well instead of just returning max probability prediction in each well. 
-11. Generate average aggregate wells in different local areas for wells at different prediction levels. See if there are trends or if this helps to idenetify geologic meaningful features that correlate to many combined machine-learning model features. 
-12. Explore methods to visualize weigtings of features on individual well basis using techniques similar to those learned in image-based deep-learning. 
-13. Cluster wells using unsupervised learning and then see if clusters can be created that correlated with supervised prediction results. 
+5. Build upon early investigation for geographic similar well cross-correlation as 1st step before other feature engineering & modeling.
+6. Explore other time series matching as pre-modeling step for additional feature generation or weighting. 
+7. Visualize probabilty of pick along well instead of just returning max probability prediction in each well. 
+8. Generate average aggregate wells in different local areas for wells at different prediction levels. See if there are trends or if this helps to idenetify geologic meaningful features that correlate to many combined machine-learning model features. 
+9. Explore methods to visualize weigtings of features on individual well basis using techniques similar to those learned in image-based deep-learning. 
+10. Cluster wells using unsupervised learning and then see if clusters can be created that correlated with supervised prediction results. 
