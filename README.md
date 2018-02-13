@@ -27,6 +27,9 @@ Data is also in the repo folder: <a href="https://github.com/JustinGOSSES/Mannvi
 
 @dalide used the Alberta Geological Society's <a href="http://www1.aer.ca/GISConversionTools/conversion_tools.html">UWI conversion tool</a> to find <a href="https://github.com/JustinGOSSES/MannvilleGroup_Strat_Hackathon/blob/master/well_lat_lng.csv">lat/longs for each of the well UWIs</a>. These were then used to find each well's nearest neighbors as demonstrated in <a href="https://github.com/JustinGOSSES/MannvilleGroup_Strat_Hackathon/blob/master/notebooks_2018/mapmaking/Map_Exploration_v2-KDtree.ipynb">this</a> notebook. 
 
+## Folder Re-Organization
+On February 11th, 2018, @JustinGosses reorganized the folder to get a lot of the notebooks out of the top-level and into sub-folders as things were getting too crowded. This might cause the directory urls to some files to be incorrect. This will be the case for any notebook from the Hackathon or 2017. Fixing this problem will just require adding a ../ or ../../ to the front of the directory in most cases.
+
 ## Key Jupyter Notebooks for Hackathon project
 
 Final Data Prep & Machine Learning for the prediction finished by end of hackathon
@@ -37,8 +40,8 @@ https://github.com/JustinGOSSES/MannvilleGroup_Strat_Hackathon/blob/master/Featu
 
 ## Key Jupyter Notebooks Post Hackathon
 
-Latest feature engineering work (runs faster and less complication code)
-https://github.com/JustinGOSSES/MannvilleGroup_Strat_Hackathon/blob/master/Feature_Brainstorm_Justin_vE_PH.ipynb
+Latest feature engineering work (runs faster and less complication code with  15.56 RMSE)
+https://github.com/JustinGOSSES/MannvilleGroup_Strat_Hackathon/blob/master/notebooks_2018/Test_RUN_2018_02/Prediction_with_KNN1info_2018-02-11_vB.ipynb
 
 ## Future Work
 1. Optimize code generative feature engineering code moving as much as possible to more efficient vector numpy
