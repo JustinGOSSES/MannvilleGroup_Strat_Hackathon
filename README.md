@@ -10,9 +10,11 @@
 Predict stratigraphic surfaces based on training on human-picked stratigraphic surfaces. Used 2000+ wells with Picks from the Mannville, including McMurray, in Alberta, Canada.
 
 ## Project Summary
-There has been studies that attempt to do similiar things for decades. A lot of them assume a mathematical pattern to stratigraphic surfaces and either don't train specifically on human-picked tops or do so lightly. We wanted to try as close a geologic approach (as opposed to mathematical or geophysical approach) as possible. What we managed to get done by the end of the hackathon is sorta a small scale first pass. The second page would have been a larger scale first pass, where we generate many (50-500) dumb features and train on all of them using an algorithm, perhaps XGBoosted trees or similar, that does a good job of rapidly ignorning features that aren't doing a good job at prediction. 
+There has been studies that attempt to do similiar things for decades. A lot of them assume a mathematical pattern to stratigraphic surfaces and either don't train specifically on human-picked tops or do so lightly. We wanted to try as close a geologic approach (as opposed to mathematical or geophysical approach) as possible. What we managed to get done by the end of the hackathon is sorta a small scale first pass. 
 
-Eventually, we want to get to the point where we've identified a large number of feature types that both have predictive value and can be tied back to geologist insight. There is a lot of observations happening visually (and therefore not consciously)  when a geologist looks at a well log and correlates it. In addition to automating correlation of nearby wells, we think this will help geologist have better discussions, and more quantitative discussions, about the basis of their correlation and why correlations might differ between geologists.
+Eventually, we want to get to the point where we've identified a large number of feature types that both have predictive value and can be tied back to geologist insight. There are a lot of observations happening visually (and therefore not consciously)  when a geologist looks at a well log and correlates it. We want to focus on engineering features that mimic these observations and the multitude of scales at which they occur.
+
+In addition to automating correlation of nearby wells based on picks that already exist, which has value, we think this will help geologist have better discussions, and more quantitative discussions, about the basis of their correlation and why correlations might differ between geologists. You can imagine a regional area with two separate teams with different approaches to picking a top. You could use this to programmatically pick tops in area B like they are picked in area A and also the inverse. The differences in pick style then becomes easier to analyze with less additional work. 
 
 ## Datasets for Hackathon project
 
@@ -22,6 +24,8 @@ http://ags.aer.ca/document/OFR/OFR_1994_14.PDF
 Electronic data for Athabasca Oil Sands Data McMurray/Wabiskaw Oil Sands Deposit
 http://ags.aer.ca/publications/SPE_006.html
 Data is also in the repo folder: <a href="https://github.com/JustinGOSSES/MannvilleGroup_Strat_Hackathon/tree/master/SPE_006_originalData">SPE_006_originalData</a>
+
+@dalide used the Alberta Geological Society's <a href="http://www1.aer.ca/GISConversionTools/conversion_tools.html">UWI conversion tool</a> to find <a href="https://github.com/JustinGOSSES/MannvilleGroup_Strat_Hackathon/blob/master/well_lat_lng.csv">lat/longs for each of the well UWIs</a>. These were then used to find each well's nearest neighbors as demonstrated in <a href="https://github.com/JustinGOSSES/MannvilleGroup_Strat_Hackathon/blob/master/notebooks_2018/mapmaking/Map_Exploration_v2-KDtree.ipynb">this</a> notebook. 
 
 ## Key Jupyter Notebooks for Hackathon project
 
