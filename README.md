@@ -42,21 +42,18 @@ https://github.com/JustinGOSSES/MannvilleGroup_Strat_Hackathon/blob/master/Featu
 
 Latest feature engineering work (runs faster and less complication code with  15.56 RMSE)
 https://github.com/JustinGOSSES/MannvilleGroup_Strat_Hackathon/blob/master/notebooks_2018/Test_RUN_2018_02/Prediction_with_KNN1info_2018-02-11_vB.ipynb
+Key approaches were:
+1. Leverage knowledge from nearby wells.
+2. Instead of distinguishing between 2 classes, pick and not pick, distinguish between 3 class, pick, not pick but within 5 meters and not within 5 of pick.
 
-## Future Work
+## Future Work (missing numbers are work already done)
 1. Optimize code generative feature engineering code moving as much as possible to more efficient vector numpy
-   A. Features Type A) average value within different windows above, below, and around each depth point. 
-   B. Features Type B) average value of a different number of max and min points within different size windows above, around, and below each depth point.
-   C. Features Type C) find difference between a different number of max/min values in different size windows around each depth point.
 2. Shrink feature generation to more reasonable number
 3. Explore different ways to pick included features that are more efficient
 4. Continue deployment on GPU cloud instances with more computing power
-5. Use geopandas & folium to investigate geographic distribution of pick prediction error
-6. Explore adding a feature for geographic similarity
 7. Build upon early investigation for geographic similar well cross-correlation as 1st step before other feature engineering & modeling.
 8. Explore other time series matching as pre-modeling step for additional feature generation or weighting. 
-9. Visualize probabilty of pick along well instead of just returning max probability prediction in each well.
-10. Explore prediction accuracy vs. original pick uncertainty level. Graph percent of picks within different depth cut-offs with different lines for different original uncertainty levels in picks. 
+9. Visualize probabilty of pick along well instead of just returning max probability prediction in each well. 
 11. Generate average aggregate wells in different local areas for wells at different prediction levels. See if there are trends or if this helps to idenetify geologic meaningful features that correlate to many combined machine-learning model features. 
 12. Explore methods to visualize weigtings of features on individual well basis using techniques similar to those learned in image-based deep-learning. 
 13. Cluster wells using unsupervised learning and then see if clusters can be created that correlated with supervised prediction results. 
