@@ -46,7 +46,7 @@ Key approaches were:
 1. Leverage knowledge from nearby wells.
 2. Instead of distinguishing between 2 classes, pick and not pick, distinguish between 3 classes: (a) pick, (b) not pick but within 3 meters and (c) not pick and not within 3 meters of pick.
 
-## Future Work
+## Future Work [also see issues]
 1. Optimize code generative feature engineering code moving as much as possible to more efficient vector numpy
 2. Shrink feature generation to more reasonable number
 3. Explore different ways to pick included features that are more efficient
