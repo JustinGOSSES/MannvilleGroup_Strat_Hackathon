@@ -40,9 +40,9 @@ https://github.com/JustinGOSSES/MannvilleGroup_Strat_Hackathon/blob/master/Featu
 
 ## Key Jupyter Notebooks Post Hackathon
 
-Latest feature engineering work (runs faster and less complication code with  15.03 RMSE)
+Latest feature engineering work:
 https://github.com/JustinGOSSES/MannvilleGroup_Strat_Hackathon/blob/master/notebooks_2018/Test_RUN_2018_02/Prediction_with_KNN1info_2018-02-11_vB.ipynb
-Key approaches were:
+The code runs faster and and root mean squared error is down from 90 to 15.03. Key approaches were:
 1. Leverage knowledge from nearby wells.
 2. Instead of distinguishing between 2 classes, pick and not pick, distinguish between 3 classes: (a) pick, (b) not pick but within 3 meters and (c) not pick and not within 3 meters of pick.
 
@@ -57,3 +57,6 @@ Key approaches were:
 8. Generate average aggregate wells in different local areas for wells at different prediction levels. See if there are trends or if this helps to idenetify geologic meaningful features that correlate to many combined machine-learning model features. 
 9. Explore methods to visualize weigtings of features on individual well basis using techniques similar to those learned in image-based deep-learning. 
 10. Cluster wells using unsupervised learning and then see if clusters can be created that correlated with supervised prediction results. 
+
+## Help Wanted
+This repo isn't particularly organized and there hasn't be a lot of time spent (actually no time spent) to make jumping in and helping out easy. That being said, there's no reason you couldn't just jump in an start improving things. The original group is working on this at a low level when we have time. There are a few issues that are enhancements that would be a good place to start.
