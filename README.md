@@ -40,11 +40,11 @@ https://github.com/JustinGOSSES/MannvilleGroup_Strat_Hackathon/blob/master/Featu
 
 ## Key Jupyter Notebooks Post Hackathon
 
-Latest feature engineering work (runs faster and less complication code with  15.56 RMSE)
+Latest feature engineering work (runs faster and less complication code with  15.03 RMSE)
 https://github.com/JustinGOSSES/MannvilleGroup_Strat_Hackathon/blob/master/notebooks_2018/Test_RUN_2018_02/Prediction_with_KNN1info_2018-02-11_vB.ipynb
 Key approaches were:
 1. Leverage knowledge from nearby wells.
-2. Instead of distinguishing between 2 classes, pick and not pick, distinguish between 3 class, pick, not pick but within 5 meters and not within 5 of pick.
+2. Instead of distinguishing between 2 classes, pick and not pick, distinguish between 3 classes: (a) pick, (b) not pick but within 3 meters and (c) not pick and not within 3 meters of pick.
 
 ## Future Work
 1. Optimize code generative feature engineering code moving as much as possible to more efficient vector numpy
