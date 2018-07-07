@@ -24,10 +24,5 @@ Some notebooks are options. Those will be prefixed with (o). Mandetory ones will
 	- To the extent the file name isn't clear, a markdown or json should be included in the same folder as the notebook that describes in detail which notebook created that file and what is included. 
 
 ## Conda Environment
-?
-
-## Python files not in the conda environment
-- welly
-- lasio
-- matplotlib
+Documented in environment.yml at root level of this repo.
 
