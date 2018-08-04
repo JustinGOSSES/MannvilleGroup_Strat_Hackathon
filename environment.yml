@@ -1,4 +1,4 @@
-name: MannvilleDask
+name: MannvilleDask2
 channels:
   - anaconda
   - conda-forge
