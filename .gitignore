@@ -1,2 +1,6 @@
 *.p
 *.h5
+*/dask-worker-space/*
+.ipynb_checkpoints/
+.DS_Store
+.gitignore
