@@ -39,24 +39,23 @@ Version of feature engineering work done during hackathon (but didn't get to inc
 https://github.com/JustinGOSSES/MannvilleGroup_Strat_Hackathon/blob/master/Feature_Brainstorm_Justin_vD-Copy1.ipynb
 
 ## Key Jupyter Notebooks Post Hackathon
+Code development has moved to the `modular_redo` sub-folder. Things were made more modular to better enable short bits of work when time available. The notebooks are a bit messy but will clean up in near future.
+https://github.com/JustinGOSSES/MannvilleGroup_Strat_Hackathon/tree/master/notebooks_2018/modular_redo]
 
-Latest feature engineering work:
-https://github.com/JustinGOSSES/MannvilleGroup_Strat_Hackathon/blob/master/notebooks_2018/Test_RUN_2018_02/Prediction_with_KNN1info_2018-02-11_vB.ipynb
-The code runs faster and and root mean squared error is down from 90 to 15.03. Key approaches were:
+The code runs faster and and mean absolute error is down from 90 to 15.03 and now 8+. Key approaches were:
 1. Leverage knowledge from nearby wells.
 2. Instead of distinguishing between 2 classes, pick and not pick, distinguish between 3 classes: (a) pick, (b) not pick but within 3 meters and (c) not pick and not within 3 meters of pick.
+3. More features
+4. Two steps: first step is classification. Second step uses classification and finds the mean prediction point (may go to regression ML as second step in near future. 
+
 
 ## Future Work [also see issues]
-1. Optimize code generative feature engineering code moving as much as possible to more efficient vector numpy
-2. Shrink feature generation to more reasonable number
-3. Explore different ways to pick included features that are more efficient
 4. Continue deployment on GPU cloud instances with more computing power
-5. Build upon early investigation for geographic similar well cross-correlation as 1st step before other feature engineering & modeling.
 6. Explore other time series matching as pre-modeling step for additional feature generation or weighting. 
 7. Visualize probabilty of pick along well instead of just returning max probability prediction in each well. 
 8. Generate average aggregate wells in different local areas for wells at different prediction levels. See if there are trends or if this helps to idenetify geologic meaningful features that correlate to many combined machine-learning model features. 
 9. Explore methods to visualize weigtings of features on individual well basis using techniques similar to those learned in image-based deep-learning. 
-10. Cluster wells using unsupervised learning and then see if clusters can be created that correlated with supervised prediction results. 
+10. Cluster wells using unsupervised learning and then see if clusters can be created that correlated with supervised prediction results. (initial trials with UMAP give encouraging results)
 
 ## Help Wanted
 This repo isn't particularly organized and there hasn't be a lot of time spent (actually no time spent) to make jumping in and helping out easy. That being said, there's no reason you couldn't just jump in an start improving things. The original group is working on this at a low level when we have time. There are a few issues that are enhancements that would be a good place to start.
