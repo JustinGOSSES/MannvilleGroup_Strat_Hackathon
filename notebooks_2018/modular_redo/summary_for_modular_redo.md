@@ -29,3 +29,18 @@ Some notebooks are options. Those will be prefixed with (o). Mandetory ones will
 ## Conda Environment
 Documented in environment.yml at root level of this repo. ( this is currently slightly out of date )
 
+
+## Patterns to be encouraged
+
+
+## Flaws that shouldn't develop:
+- Copying a notebook shouldn't result in two notebooks, each with slightly different code, that overright the same variable that is written to a file!
+- Minimize "heavy" functions that need to be run before other code is changed by having those at the end of notebook!
+- Minimize chance for accidental variable re-write and state loss within each notebook
+
+
+## Eventual vision:
+- Maximize percentage of code that just runs from one or a few calls while still maintaining the ability to edit how things run
+- Take out anything, or at least as much as possible, that might be viewed as hardcoded, either names, variables, presence of fields, data structure, etc. 
+- Be able to "just run" as well as mess with details as you want
+
