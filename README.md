@@ -9,6 +9,9 @@
 ## Project Statement
 Predict stratigraphic surfaces based on training on human-picked stratigraphic surfaces. Used 2000+ wells with Picks from the Mannville, including McMurray, in Alberta, Canada.
 
+## Philosophy 
+Instead of assuming there is a mathematical or pattern basis for stratigraphic surfaces that can be teased out of logs, focus on creating programatic features and operations that mimic the comparison-based observations that would have been done by a geologist.
+
 ## Project Summary
 There has been studies that attempt to do similiar things for decades. A lot of them assume a mathematical pattern to stratigraphic surfaces and either don't train specifically on human-picked tops or do so lightly. We wanted to try as close a geologic approach (as opposed to mathematical or geophysical approach) as possible. What we managed to get done by the end of the hackathon is sorta a small scale first pass. 
 
