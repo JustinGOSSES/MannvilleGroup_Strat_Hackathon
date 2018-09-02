@@ -1,4 +1,5 @@
-# Summary of Modular_Redo folder
+# Summary of Modular_Redo folder 
+(written mostly before starting)
 
 ## Purpose
 Most of the code before this point, July 2018, was in only one or two notebooks and most of the calculated data was between starting and finished was only kept in memory. As a result, it took a lot of time to jump back in to the project each time as a lot had to be re-run. This reorganization is meant to allow it to be easier to jump back in the project, work a little bit and then step away. It is a nights and weekend project, so this is a key characteristic to shoot for. The reorganization attempts to better enable smaller amounts of work through:
@@ -10,12 +11,14 @@ Most of the code before this point, July 2018, was in only one or two notebooks 
 ## Likely Notebooks
 Some notebooks are options. Those will be prefixed with (o). Mandetory ones will have (m).
 
-- (m) Find K nearest neighbors for each well. 
 - (m) Load LAS files
-- (m) Create features.
-- (m) Machine learning
-- (0) Map results.
-- (0) Evaluate results of machine-learning.
+- (m) Find K nearest neighbors for each well. 
+- (m) Create features
+- (0) Explore feature visualization, correlation and possible feature reduction though UMAP and other visualizations.
+- (m) Machine learning 1: Model training
+- (m) Machine learning 2: Inference, modeling part 2, inference, scoring
+- (0) Map results
+- (0) Evaluate results of machine-learning
 - (0) Explore feature correlation and alternative feature creation though UMAP and other visualizations.
 
 ## Organization
@@ -31,6 +34,8 @@ Documented in environment.yml at root level of this repo. ( this is currently sl
 
 
 ## Patterns to be encouraged
+- Changes in what original features are used propogate throughout notebooks without having to change code, just fist notebook?
+- Changes in which top is predicted propogate through notebooks without changing code, just first notebook?
 
 
 ## Flaws that shouldn't develop:
@@ -43,4 +48,88 @@ Documented in environment.yml at root level of this repo. ( this is currently sl
 - Maximize percentage of code that just runs from one or a few calls while still maintaining the ability to edit how things run
 - Take out anything, or at least as much as possible, that might be viewed as hardcoded, either names, variables, presence of fields, data structure, etc. 
 - Be able to "just run" as well as mess with details as you want
+
+-------------------------
+
+## Original inputs:
+- LAS files for each well
+- Text file of pick depths for multiple surfaces in each well
+- CSV file of lat/long for each well
+
+## Column Types:
+
+### Index columns not used as training or targets but used for keeping track of things
+- UWI
+- Site 
+- depth 
+- etc.
+
+
+### Feature Columns or columns used to generate other columns that are features
+- Original unchanged columns from logs that are common enough to be included
+	- GR
+	- ILD
+	- RHOB
+	- NPHI 	
+	- DPHI
+	- CALI
+- Original columns from data sources that weren't LAS files
+	- Pick depth for that well
+	- Location information
+	- Thickness calculated in nearby wells
+	- Depth of predicted top using only thickness information from nearby wells
+	- Distance between depth of row in question and prediction from neighbor thickness
+	- Pick quality of nearsest neighbor
+	- Average pick quality in all nearest neighbors
+	- Distance betweeen depth of row in question and prediction from all nearest neighbor thicknesses
+	- [NOT YET DONE] various regiona locations tied to GDE noted at 1 or 0 in multiple columns
+- Programmatically generated colummns without normalization
+	- For each of the original unchanged colums above:
+		- And for various window depths
+			- Around & Mean within window
+			- Above & Mean within 
+			- Around & Min within window
+			- Above & Min within window
+			- Around & Max within window
+			- Above & nLargest within window
+			- Around & nLargest within window
+			- [NOT YET DONE] need to do all of above but in below dirction too!!!
+		
+- Programmatically generated columns with normalization done only within each well
+	- [NOT YET DONE]:
+			- For each well, normalize GR from 0 to 1 as new column (might do columns other than GR?)
+			- For windows of given size at distances at or away from row instance, find the average of N highest normalized GR values
+- Programmatically generated columns with normalization across all wells
+	- [NOT YET DONE] well thickness
+	- 
+
+### Target or label columns: (different ways to do this)
+- Yes/no for whether a row is a specific top
+- formation labels along each row
+- At pick, near pick, or far away from a specific pick. 
+- Nothing or pick name if row is closest row to that pick depth
+
+## Author provided variables in first notebook! and continued throughout!
+- Name of top to be predicted
+- Name of other top to use for known neighbor well thickness calculations
+- Original LAS curves that are common enough to be used as features (others disgarded)
+- Names of LAS curves to be used for each type of calculated features
+
+## Steps:
+- Load log curves
+- Figure out which log curves are there often enough to be used
+- Load tops and figure out which ones are there often enough to use
+- Picks tops & logs that need to be present to use a well, Limt the wells to those in that group
+- Create unique ID for each row
+- Create column to be used for training/test split
+- Load picks as dataframe.
+- Find nearest neighbors for each well using only wells in training set for traing, and all wells for test wells. Calculate thickness of top in question to other top below or above of nearsest neighbor and nearest 7 neighbors, max, min, and variance in thickness. Add as features.
+- Create features
+- Add in nearest neighbor features
+- Train models - classification models that result in class of at pick, near pick, or away from pick
+- Model Inference
+- Training or picking step 2, in which regression, or simple  process of finding median value, in order to place a score for each row. Max score is the predicted pick. Other higher scores used to represent uncertainty of pick... not sure the best way to go about that yet. 
+- Scoring and visualization of error 
+
+
 
