@@ -47,7 +47,15 @@ Documented in environment.yml at root level of this repo. ( this is currently sl
 ## Eventual vision:
 - Maximize percentage of code that just runs from one or a few calls while still maintaining the ability to edit how things run
 - Take out anything, or at least as much as possible, that might be viewed as hardcoded, either names, variables, presence of fields, data structure, etc. 
-- Be able to "just run" as well as mess with details as you want
+- Be able to "just run" as well as mess with details as you want.
+- Could be run as series of notebooks and change anything in the process, could as single notebook with visibility into code just without changing the code, could be run from command line without changing or knowing what is going on in the code.
+
+## Changes needed to get to 'eventual vision':
+- Need to change some of the variable names and code such that it is more generalized and not specific to top McMurray pick.
+- Need to package more of the work into functions that can be both wrapped into a single big function run at the bottom of the notebook & functions that can be easily swapped out in said function at bottom of each notebook. 
+- Need to consider what will happen when migrating back into single notebook or out of notebook model entirely.
+	- Can these things still be packaged into calls made in sequence from an object oriented package? 
+	- What documentation and tests will eventually need to be included? What problems might arise if people run this on different datasets with different characteristics?
 
 -------------------------
 
