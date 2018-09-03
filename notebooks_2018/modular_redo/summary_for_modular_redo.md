@@ -56,6 +56,13 @@ Documented in environment.yml at root level of this repo. ( this is currently sl
 - Need to consider what will happen when migrating back into single notebook or out of notebook model entirely.
 	- Can these things still be packaged into calls made in sequence from an object oriented package? 
 	- What documentation and tests will eventually need to be included? What problems might arise if people run this on different datasets with different characteristics?
+- Things that are currently done by human that will need to be done by code to be able to run this from a single command include:
+	- What curves are common enough to justify including them?
+	- Which wells to exclude for data limitations?
+	- How to fill gaps in curves?
+	- Count the number of wells with each top present and return those wells in an array of some type
+	- Get the wells where both necessary top and necessary curves are present
+	- Let human override all of the steps above?
 
 -------------------------
 
@@ -66,7 +73,7 @@ Documented in environment.yml at root level of this repo. ( this is currently sl
 
 ## Column Types:
 
-### Index columns not used as training or targets but used for keeping track of things
+### Index columns not used as training or targets but mainly used for keeping track of things
 - UWI
 - Site 
 - depth 
