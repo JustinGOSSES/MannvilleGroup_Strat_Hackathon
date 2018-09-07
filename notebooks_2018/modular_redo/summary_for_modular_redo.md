@@ -11,15 +11,15 @@ Most of the code before this point, July 2018, was in only one or two notebooks 
 ## Likely Notebooks
 Some notebooks are options. Those will be prefixed with (o). Mandetory ones will have (m).
 
-- (m) Load LAS files
+- (o) Figure out what wells can be used based on presence or lack of tops and well curves
+- (m) Load LAS files & restrict based on presence of tops and well curves
 - (m) Find K nearest neighbors for each well. 
 - (m) Create features
-- (0) Explore feature visualization, correlation and possible feature reduction though UMAP and other visualizations.
 - (m) Machine learning 1: Model training
-- (m) Machine learning 2: Inference, modeling part 2, inference, scoring
-- (0) Map results
-- (0) Evaluate results of machine-learning
-- (0) Explore feature correlation and alternative feature creation though UMAP and other visualizations.
+- (m) Machine learning 2: Inference, modeling part 2, inference 2, and scoring
+- (o) Map results
+- (o) Evaluate results of machine-learning
+- (o) Explore features and alternative feature creation though UMAP and other visualizations techniques.
 
 ## Organization
 - To make it clear what pickles or hdf5 files are created by which notebooks, the following practices are suggested. 
@@ -47,7 +47,22 @@ Documented in environment.yml at root level of this repo. ( this is currently sl
 ## Eventual vision:
 - Maximize percentage of code that just runs from one or a few calls while still maintaining the ability to edit how things run
 - Take out anything, or at least as much as possible, that might be viewed as hardcoded, either names, variables, presence of fields, data structure, etc. 
-- Be able to "just run" as well as mess with details as you want
+- Be able to "just run" as well as mess with details as you want.
+- Could be run as series of notebooks and change anything in the process, could as single notebook with visibility into code just without changing the code, could be run from command line without changing or knowing what is going on in the code.
+
+## Changes needed to get to 'eventual vision':
+- Need to change some of the variable names and code such that it is more generalized and not specific to top McMurray pick.
+- Need to package more of the work into functions that can be both wrapped into a single big function run at the bottom of the notebook & functions that can be easily swapped out in said function at bottom of each notebook. 
+- Need to consider what will happen when migrating back into single notebook or out of notebook model entirely.
+	- Can these things still be packaged into calls made in sequence from an object oriented package? 
+	- What documentation and tests will eventually need to be included? What problems might arise if people run this on different datasets with different characteristics?
+- Things that are currently done by human that will need to be done by code to be able to run this from a single command include:
+	- What curves are common enough to justify including them?
+	- Which wells to exclude for data limitations?
+	- How to fill gaps in curves?
+	- Count the number of wells with each top present and return those wells in an array of some type
+	- Get the wells where both necessary top and necessary curves are present
+	- Let human override all of the steps above?
 
 -------------------------
 
@@ -58,7 +73,7 @@ Documented in environment.yml at root level of this repo. ( this is currently sl
 
 ## Column Types:
 
-### Index columns not used as training or targets but used for keeping track of things
+### Index columns not used as training or targets but mainly used for keeping track of things
 - UWI
 - Site 
 - depth 
@@ -115,7 +130,7 @@ Documented in environment.yml at root level of this repo. ( this is currently sl
 - Original LAS curves that are common enough to be used as features (others disgarded)
 - Names of LAS curves to be used for each type of calculated features
 
-## Steps:
+## Approximate Steps:
 - Load log curves
 - Figure out which log curves are there often enough to be used
 - Load tops and figure out which ones are there often enough to use
