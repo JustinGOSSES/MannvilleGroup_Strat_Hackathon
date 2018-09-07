@@ -11,15 +11,15 @@ Most of the code before this point, July 2018, was in only one or two notebooks 
 ## Likely Notebooks
 Some notebooks are options. Those will be prefixed with (o). Mandetory ones will have (m).
 
-- (m) Load LAS files
+- (o) Figure out what wells can be used based on presence or lack of tops and well curves
+- (m) Load LAS files & restrict based on presence of tops and well curves
 - (m) Find K nearest neighbors for each well. 
 - (m) Create features
-- (0) Explore feature visualization, correlation and possible feature reduction though UMAP and other visualizations.
 - (m) Machine learning 1: Model training
-- (m) Machine learning 2: Inference, modeling part 2, inference, scoring
-- (0) Map results
-- (0) Evaluate results of machine-learning
-- (0) Explore feature correlation and alternative feature creation though UMAP and other visualizations.
+- (m) Machine learning 2: Inference, modeling part 2, inference 2, and scoring
+- (o) Map results
+- (o) Evaluate results of machine-learning
+- (o) Explore features and alternative feature creation though UMAP and other visualizations techniques.
 
 ## Organization
 - To make it clear what pickles or hdf5 files are created by which notebooks, the following practices are suggested. 
@@ -130,7 +130,7 @@ Documented in environment.yml at root level of this repo. ( this is currently sl
 - Original LAS curves that are common enough to be used as features (others disgarded)
 - Names of LAS curves to be used for each type of calculated features
 
-## Steps:
+## Approximate Steps:
 - Load log curves
 - Figure out which log curves are there often enough to be used
 - Load tops and figure out which ones are there often enough to use
