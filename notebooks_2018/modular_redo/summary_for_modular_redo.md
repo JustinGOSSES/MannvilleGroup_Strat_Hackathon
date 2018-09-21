@@ -84,10 +84,8 @@ Documented in environment.yml at root level of this repo. ( this is currently sl
 - Original unchanged columns from logs that are common enough to be included
 	- GR
 	- ILD
-	- RHOB
 	- NPHI 	
 	- DPHI
-	- CALI
 - Original columns from data sources that weren't LAS files
 	- Pick depth for that well
 	- Location information
@@ -145,6 +143,21 @@ Documented in environment.yml at root level of this repo. ( this is currently sl
 - Model Inference
 - Training or picking step 2, in which regression, or simple  process of finding median value, in order to place a score for each row. Max score is the predicted pick. Other higher scores used to represent uncertainty of pick... not sure the best way to go about that yet. 
 - Scoring and visualization of error 
+
+## List of things that will likely vary with different datasets or different approaches
+
+- Which top you're trying to predict for
+- Whether you use information about predictions for other tops to inform the prediction for another top
+- Whether you need wells in your training and prediction set to have a base or top already there to use neighbor thickness as a variable
+- Which curves are used
+- Whether all wells must have those curves
+- Whether different curve names that represent a similar curve type can be used as the same curve
+- Number of wells
+- Degree of petrophysics used beforehand as preprocessing
+- What columns are normalizes to a 0-1 scale and whether normalization is done at well level or across all wells.
+- To what degree you include geographic regions are a feature
+- To what degree you use well to well differences between neighbors as features
+
 
 
 
