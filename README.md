@@ -53,8 +53,6 @@ The code runs faster and and mean absolute error is down from 90 to 15.03 and no
 
 
 ## Future Work [also see issues]
-4. Continue deployment on GPU cloud instances with more computing power
-6. Explore other time series matching as pre-modeling step for additional feature generation or weighting. 
 7. Visualize probabilty of pick along well instead of just returning max probability prediction in each well. 
 8. Generate average aggregate wells in different local areas for wells at different prediction levels. See if there are trends or if this helps to idenetify geologic meaningful features that correlate to many combined machine-learning model features. 
 9. Explore methods to visualize weigtings of features on individual well basis using techniques similar to those learned in image-based deep-learning. 
