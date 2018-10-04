@@ -1,6 +1,9 @@
 *.p
 *.h5
 */dask-worker-space/*
+dask-worker-space/*
+dask-worker-space/
+*.dirlock
 .ipynb_checkpoints/
 .DS_Store
 .gitignore
