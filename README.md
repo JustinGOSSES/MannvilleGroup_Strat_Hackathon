@@ -51,7 +51,7 @@ The code runs faster and and mean absolute error is down from 90 to 15.03 and no
 3. More features
 4. Two steps: first step is classification. Second step uses classification and finds the mean prediction point (may go to regression ML as second step in near future. 
 
-#### Distribution of Absolute Error for Top McMurray Surface in Meters. 
+#### Distribution of Absolute Error in Test Portion of Dataset for Top McMurray Surface in Meters. 
 Y-axis is number of picks in each bin, and X-axis is distance predicted pick is off from human-generated pick.
 <img src="current_errors_TopMcMr_20181006.png"
      alt="image of current_errors_TopMcMr_20181006"
