@@ -64,5 +64,8 @@ Y-axis is number of picks in each bin, and X-axis is distance predicted pick is 
 9. Explore methods to visualize weigtings of features on individual well basis using techniques similar to those learned in image-based deep-learning. 
 10. Cluster wells using unsupervised learning and then see if clusters can be created that correlated with supervised prediction results. (initial trials with UMAP give encouraging results)
 
+## Eventual Move of this Repository Contents to a Different Repository
+The plan is that once things are winnowed down to a final approach, the resulting code will be moved the <a href="https://github.com/JustinGOSSES/StratPickSupML">StratPickSupML</a> repository will it will be cleaned into one or more modules and demo notebooks with less clutter of failed but possibly useful if reworked approaches.
+
 ## Help Wanted
 This repo isn't particularly organized and there hasn't be a lot of time spent (actually no time spent) to make jumping in and helping out easy. That being said, there's no reason you couldn't just jump in an start improving things. The original group is working on this at a low level when we have time. There are a few issues that are enhancements that would be a good place to start.
