@@ -45,11 +45,15 @@ https://github.com/JustinGOSSES/MannvilleGroup_Strat_Hackathon/blob/master/Featu
 Code development has moved to the `modular_redo` sub-folder. Things were made more modular to better enable short bits of work when time available. The notebooks are a bit messy but will clean up in near future.
 https://github.com/JustinGOSSES/MannvilleGroup_Strat_Hackathon/tree/master/notebooks_2018/modular_redo]
 
-The code runs faster and and mean absolute error is down from 90 to 15.03 and now 8+. Key approaches were:
+The code runs faster and and mean absolute error is down from 90 to 15.03 and now 7+. Key approaches were:
 1. Leverage knowledge from nearby wells.
 2. Instead of distinguishing between 2 classes, pick and not pick, distinguish between 3 classes: (a) pick, (b) not pick but within 3 meters and (c) not pick and not within 3 meters of pick.
 3. More features
 4. Two steps: first step is classification. Second step uses classification and finds the mean prediction point (may go to regression ML as second step in near future. 
+
+<img src="current_errors_TopMcMr_20181006.png"
+     alt="image of current_errors_TopMcMr_20181006"
+     style="float: left; margin-right: 25px;" />
 
 
 ## Future Work [also see issues]
