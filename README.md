@@ -41,7 +41,7 @@ https://github.com/JustinGOSSES/MannvilleGroup_Strat_Hackathon/blob/master/data_
 Version of feature engineering work done during hackathon (but didn't get to include during hackathon)
 https://github.com/JustinGOSSES/MannvilleGroup_Strat_Hackathon/blob/master/Feature_Brainstorm_Justin_vD-Copy1.ipynb
 
-## Key Jupyter Notebooks Post Hackathon
+## Key Jupyter Notebooks Post Hackathon & Recent Results
 Code development has moved to the `modular_redo` sub-folder. Things were made more modular to better enable short bits of work when time available. The notebooks are a bit messy but will clean up in near future.
 https://github.com/JustinGOSSES/MannvilleGroup_Strat_Hackathon/tree/master/notebooks_2018/modular_redo]
 
