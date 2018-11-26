@@ -41,11 +41,11 @@ https://github.com/JustinGOSSES/MannvilleGroup_Strat_Hackathon/blob/master/data_
 Version of feature engineering work done during hackathon (but didn't get to include during hackathon)
 https://github.com/JustinGOSSES/MannvilleGroup_Strat_Hackathon/blob/master/Feature_Brainstorm_Justin_vD-Copy1.ipynb
 
-## Key Jupyter Notebooks Post Hackathon & Recent Results
+## Key Jupyter Notebooks Post Hackathon
 Code development has moved to the `modular_redo` sub-folder. Things were made more modular to better enable short bits of work when time available. The notebooks are a bit messy but will clean up in near future.
 https://github.com/JustinGOSSES/MannvilleGroup_Strat_Hackathon/tree/master/notebooks_2018/modular_redo]
 
-#### Recent updates
+## Recent updates
 The code runs faster and and mean absolute error is down from 90 to 15.03 and now 7+. Key approaches were:
 1. Leverage knowledge from nearby wells.
 2. Instead of distinguishing between 2 classes, pick and not pick, distinguish between 3 classes: (a) pick, (b) not pick but within 3 meters and (c) not pick and not within 3 meters of pick.
@@ -68,6 +68,7 @@ Y-axis is number of picks in each bin, and X-axis is distance predicted pick is 
 8. Generate average aggregate wells in different local areas for wells at different prediction levels. See if there are trends or if this helps to idenetify geologic meaningful features that correlate to many combined machine-learning model features. 
 9. Explore methods to visualize weigtings of features on individual well basis using techniques similar to those learned in image-based deep-learning. 
 10. Cluster wells using unsupervised learning and then see if clusters can be created that correlated with supervised prediction results. (initial trials with UMAP give encouraging results)
+11. Rework parts of this into more object oriented approach.
 
 ## Eventual Move of this Repository Contents to a Different Repository
 The plan is that once things are winnowed down to a final approach, the resulting code will be moved the <a href="https://github.com/JustinGOSSES/StratPickSupML">StratPickSupML</a> repository will it will be cleaned into one or more modules and demo notebooks with less clutter of failed but possibly useful if reworked approaches.
