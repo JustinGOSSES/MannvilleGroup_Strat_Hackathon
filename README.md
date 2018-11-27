@@ -62,6 +62,7 @@ Y-axis is number of picks in each bin, and X-axis is distance predicted pick is 
      alt="image of current_errors_TopMcMr_20181006"
      style="float: left; margin-right: 25px;" />
 
+Current algorithm used is XGBoost.
 
 ## Future Work [also see issues]
 7. Visualize probabilty of pick along well instead of just returning max probability prediction in each well. 
@@ -69,6 +70,7 @@ Y-axis is number of picks in each bin, and X-axis is distance predicted pick is 
 9. Explore methods to visualize weigtings of features on individual well basis using techniques similar to those learned in image-based deep-learning. 
 10. Cluster wells using unsupervised learning and then see if clusters can be created that correlated with supervised prediction results. (initial trials with UMAP give encouraging results)
 11. Rework parts of this into more object oriented approach.
+12. Use H2O's automl library to try to improve on standard XGBoost approach.
 
 ## Eventual Move of this Repository Contents to a Different Repository
 The plan is that once things are winnowed down to a final approach, the resulting code will be moved the <a href="https://github.com/JustinGOSSES/StratPickSupML">StratPickSupML</a> repository will it will be cleaned into one or more modules and demo notebooks with less clutter of failed but possibly useful if reworked approaches.
