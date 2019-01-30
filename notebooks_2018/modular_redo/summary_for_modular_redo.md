@@ -53,6 +53,7 @@ Documented in environment.yml at root level of this repo. ( this is currently sl
 ## Changes needed to get to 'eventual vision':
 - Need to change some of the variable names and code such that it is more generalized and not specific to top McMurray pick.
 - Need to package more of the work into functions that can be both wrapped into a single big function run at the bottom of the notebook & functions that can be easily swapped out in said function at bottom of each notebook. 
+- Eventually need to wrap larger functions into object oriented classes
 - Need to consider what will happen when migrating back into single notebook or out of notebook model entirely.
 	- Can these things still be packaged into calls made in sequence from an object oriented package? 
 	- What documentation and tests will eventually need to be included? What problems might arise if people run this on different datasets with different characteristics?
@@ -63,7 +64,32 @@ Documented in environment.yml at root level of this repo. ( this is currently sl
 	- Count the number of wells with each top present and return those wells in an array of some type
 	- Get the wells where both necessary top and necessary curves are present
 	- Let human override all of the steps above?
-
+- Things that should be kept track of and not just be "in process" or "hard coded"
+ 1. paths to original input data not created during any of this process
+     - wells
+     - top names
+     - known tops
+     - location csv 
+     - etc.
+ 2. paths to files saved/loaded as intermediate or final steps
+     - intermediate dataframes, objects, CSVs, etc.
+ 3. configuration variables that reflect user choices for how the code is run
+     - number and type of windows in rolling window functions
+     - which original log curves to use as feature inputs
+ 4. names of columns that serve specific purposes
+ 5. names tied to configuration variables used to create said columns
+ 6. what columns were used in what dataframes
+ 7. data objects created by preceeding steps
+- How to pass information across classes without making bad assumptions:
+    Assumptions:
+        - User will only want to use data from preceeding step in that function and not from elsewhere
+        - Data from preceeding step was created in way expected
+        - Object variables won't get too large in size if we just continuous pass full object from last step into full object in this step.
+    Possible organization to follow:
+            - Only pass what is needed not full objects. In other words pass as arguments, `object.key` not `object` and then reference `object.key`. 
+            - Try to not hard-code in default arguments. 
+            - Try to keep anything that might be a configuration variable stored in a configuration variable object such that it can be easily found and printed with eventual results long after that function has been run. The user doesn't have to "keep track" of too much.
+            
 -------------------------
 
 ## Original inputs:
