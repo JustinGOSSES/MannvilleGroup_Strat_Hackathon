@@ -1,4 +1,4 @@
-# Development has moved to <a href="https://github.com/JustinGOSSES/StratPickSupML">StratPickSupML</a> repository.
+# Development has moved to <a href="https://github.com/JustinGOSSES/predictatops">predictatops</a> repository.
 
 # MannvilleGroup_Strat_Hackathon
 - Team: Big Data > Big Lore
