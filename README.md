@@ -1,3 +1,5 @@
+# Development has moved to <a href="https://github.com/JustinGOSSES/StratPickSupML">StratPickSupML</a> repository.
+
 # MannvilleGroup_Strat_Hackathon
 - Team: Big Data > Big Lore
 - Team members: <a href="https://github.com/JustinGOSSES">JustinGOSSES</a>,<a href="https://github.com/jazzskier">jazzskier</a>, <a href="https://github.com/GeophysicsPanda">GeophysicsPanda</a>, and <a href="https://github.com/dalide">dalide</a>.
